@@ -15,13 +15,25 @@ function addTask(name) {
 
 function toggleTaskCompleted(id) {
   const updatedTasks = tasks.map(task =>{
-    if (id=== task.id){
+    if (id === task.id){
       return{...task,completed: !task.completed}
     }
   })
   setTasks(updatedTasks)
 }
-
+function deleteTask(id){
+  const remainingTasks = tasks.filter(task => id !== task.id);
+  setTasks(remainingTasks);
+}
+function editTask(id, newName){
+  const editedTaskList  = tasks.map(task =>{
+    if(id=== task.id){
+      return {...task, name: newName}
+    }
+    return task;
+  })
+  setTasks(editedTaskList);
+}
   const taskList = tasks.map(task =>
      <Todo 
         id={task.id} 
@@ -29,6 +41,8 @@ function toggleTaskCompleted(id) {
         completed={task.completed}
         key={task.id}
         toggleTaskCompleted={toggleTaskCompleted}
+        deleteTask = {deleteTask}
+        editTask = {editTask}
         />
         )
 const tasksNoun = taskList.length !== 1? 'tasks':'task'
@@ -36,7 +50,7 @@ const tasksNoun = taskList.length !== 1? 'tasks':'task'
 
   return(
     <div className="todoapp stack-large">
-    <h1>TodoMatic</h1>
+    <h1>Todo Master</h1>
     <Form addTask ={addTask}/>
     <div className="filters btn-group stack-exception">
       <FilterButton />
