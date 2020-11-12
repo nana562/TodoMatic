@@ -3,6 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-const DATA = [];
+const data = [];
 
-ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
+ReactDOM.render(<App tasks={data} />, document.getElementById("root"));
