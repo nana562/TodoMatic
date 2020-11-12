@@ -1,3 +1,13 @@
+# Features yet to be implemented
+
+1. Dark mode 
+2. Login and Signup
+3. Create User profiles 
+
+# Features that need debugging
+
+1. Only enable add button when textarea is not empty
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
