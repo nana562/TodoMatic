@@ -3,6 +3,7 @@
 1. Dark mode Theme
 2. Login and Signup
 3. Create User profiles 
+4. Redesign UI
 
 # Features that need debugging
 
