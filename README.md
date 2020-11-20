@@ -4,6 +4,7 @@
 2. Login and Signup
 3. Create User profiles 
 4. Redesign UI
+5. Add a backend
 
 # Features that need debugging
 
